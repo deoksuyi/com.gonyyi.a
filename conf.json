@@ -1,0 +1,11 @@
+{
+  "template": "link-template.html",
+  "directory": "./docs",
+  "link": {
+    "excludes": ["index.html", "404.html"],
+    "links": [
+      {"link": "snow-2021", "name": "Snow in Conway 2021", "to": "https://youtube.com/....",    "sec": 2},
+      {"link": "postdate",  "name": "Post Date Survey",    "to": "https://doc.google.com/....", "sec": 2}
+    ]
+  }
+}
