@@ -61,7 +61,7 @@ def main():
           conf.get("link", {}).get("excludes", []))
 
     if len(sys.argv) > 1:
-        update_version(sys.argv[1])
+        update_version(" ".join(sys.argv[1:]))
         # ${{ github.event.head_commit.message }}
     else:
         update_version("")
