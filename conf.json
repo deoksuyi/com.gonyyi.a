@@ -5,7 +5,6 @@
   "link": {
     "excludes": ["index.html", "404.html"],
     "links": [
-      {"link": "ig", "name": "gonyyi at instagram", "to": "https://instagram.com/gonyyi/", "sec": 2},
       {"link": "snow-2021", "name": "Snow in Conway 2021", "to": "https://youtu.be/hWEW7nbaG_w", "sec": 2},
       {"link": "postdate",  "name": "Post Date Survey",    "to": "https://docs.google.com/forms/d/e/1FAIpQLScrQiV8_L550zqlydKxsExL2ZZS7bQlK5kItu-S2U8PdK6nTg/viewform?usp=sf_link", "sec": 2}
     ]
