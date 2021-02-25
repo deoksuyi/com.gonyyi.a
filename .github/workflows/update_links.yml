@@ -18,8 +18,7 @@ jobs:
         architecture: x64      
     - name: Update the code
       run: |-
-        msg=$(git log --format=%B -n 1 ${{ github.event.after }})
-        #msg="${{ github.event.head_commit.message }}" 
+        msg="""${{ github.event.head_commit.message }}"""
         python build.py $msg
     - name: Commit and push if changed
       run: |-
