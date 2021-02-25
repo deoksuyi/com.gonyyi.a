@@ -17,9 +17,11 @@ jobs:
         python-version: 2.7
         architecture: x64      
     - name: Update the code
-      run: python build.py
+      run: python update.py
     - name: Commit and push if changed
       run: |-
+        git config --global user.email "autoupdate@gonyyi.com"
+        git config --global user.name "Auto-update"
         git diff
         git add -A
         git commit -m "Updated link pages" || exit 0
