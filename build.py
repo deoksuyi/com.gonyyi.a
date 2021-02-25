@@ -43,10 +43,12 @@ def update_version(msg):
     ver = conf.get("version", "")
     time = datetime.now()
 
-    fo.write(ver+"\n")
-    fo.write(str(time)+"\n")
-    fo.write(msg+"\n")
-    
+    fo.write("--- gonyyi.a ---\n")
+    fo.write("Version: " + ver+"\n")
+    fo.write("Updated: " + str(time)+"\n")
+    if msg != "":
+        fo.write("\n--- Change(s) --- \n" +msg+ "\n")
+
     fo.close()
 
 
@@ -61,7 +63,7 @@ def main():
     if len(sys.argv) > 1:
         update_version(sys.argv[1])
         # ${{ github.event.head_commit.message }}
-    else: 
+    else:
         update_version("")
 
     for link in conf.get("link", {}).get("links", []):
