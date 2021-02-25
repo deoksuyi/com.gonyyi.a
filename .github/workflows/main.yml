@@ -1,0 +1,26 @@
+name: Update gonyyi.a link pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 2.7
+        architecture: x64      
+    - name: Update the code
+      run: python update.py
+    - name: Commit and push if changed
+      run: |-
+        git diff
+        git add -A
+        git commit -m "Updated link pages" || exit 0
+        git push
