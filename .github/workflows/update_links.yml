@@ -17,7 +17,7 @@ jobs:
         python-version: 2.7
         architecture: x64      
     - name: Update the code
-      run: python build.py
+      run: python build.py ${{ github.event.head_commit.message }}
     - name: Commit and push if changed
       run: |-
         git config --global user.email "autoupdate@gonyyi.com"
