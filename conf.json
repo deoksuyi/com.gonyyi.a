@@ -1,16 +1,31 @@
 {
-  "version": "v1.1.1",
-  "template": "link-template.html",
-  "directory": "./docs",
-  "link": {
-    "excludes": ["index.html", "404.html"],
-    "links": [
-      {"link": "snow-2021", "name": "Snow in Conway 2021", 
-         "to": "https://youtu.be/hWEW7nbaG_w", "sec": 2},
-      {"link": "postdate",  "name": "Post Date Survey",    
-         "to": "https://docs.google.com/forms/d/e/1FAIpQLScrQiV8_L550zqlydKxsExL2ZZS7bQlK5kItu-S2U8PdK6nTg/viewform?usp=sf_link", "sec": 2},
-      {"link": "date",  "name": "Post Date Survey",    
-         "to": "https://docs.google.com/forms/d/e/1FAIpQLScrQiV8_L550zqlydKxsExL2ZZS7bQlK5kItu-S2U8PdK6nTg/viewform?usp=sf_link", "sec": 2}
-    ]
-  }
+   "directory": "./docs",
+   "link": {
+      "excludes": [
+         "index.html",
+         "404.html"
+      ],
+      "links": [
+         {
+            "link": "snow-2021",
+            "name": "Snow in Conway 2021",
+            "sec": 2,
+            "to": "https://youtu.be/hWEW7nbaG_w"
+         },
+         {
+            "link": "postdate",
+            "name": "Post Date Survey",
+            "sec": 2,
+            "to": "https://docs.google.com/forms/d/e/1FAIpQLScrQiV8_L550zqlydKxsExL2ZZS7bQlK5kItu-S2U8PdK6nTg/viewform?usp=sf_link"
+         },
+         {
+            "link": "date",
+            "name": "Post Date Survey",
+            "sec": 2,
+            "to": "https://docs.google.com/forms/d/e/1FAIpQLScrQiV8_L550zqlydKxsExL2ZZS7bQlK5kItu-S2U8PdK6nTg/viewform?usp=sf_link"
+         }
+      ]
+   },
+   "template": "link-template.html",
+   "version": "v1.1.1"
 }
