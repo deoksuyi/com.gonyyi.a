@@ -9,7 +9,9 @@ def getConf(filename):
     import json
     global conf
     conf = json.loads(open(filename, "r").read())
-
+    fo = open(filename, "w")
+    fo.write(json.dumps(conf, indent=3, sort_keys=True))
+    fo.close()
 
 def clean(dst, excludes):
     import os
