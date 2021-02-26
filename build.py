@@ -13,6 +13,15 @@ def getConf(filename):
     fo.write(json.dumps(conf, indent=3, sort_keys=True))
     fo.close()
 
+def shorter_url(url):
+    # https://docs.google.com/forms/d/e/1FAIpQLScrQiV8_L550zqlyAKxsExL2ZZS7bQlK5kItu-S2U8PdK6nTg/viewform?usp=sf_link
+    uriIndex = url.index("/", 8)
+    uri = url[uriIndex:]
+    if len(uri) > 10:
+        uri = "..." + uri[-8:]
+        return url[:uriIndex+1]+uri
+    return url
+
 def clean(dst, excludes):
     import os
     files = os.listdir(dst)
@@ -28,11 +37,13 @@ def create(link, name, to, time):
         return
     templ = open(link_template, "r")
     fo = open(link_directory + "/" + link + ".html", "w")
-
+    
     s = templ.read()
     s = s.replace("{{LINK:NAME}}", str(name))
     s = s.replace("{{LINK:TO}}", str(to))
+    s = s.replace("{{LINK:TO_SHORT}}", str(shorter_url(to)))
     s = s.replace("{{LINK:TIME}}", str(time))
+    
     fo.write(s)
     fo.close()
 
