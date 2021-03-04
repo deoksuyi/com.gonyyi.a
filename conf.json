@@ -8,13 +8,13 @@
       "links": [
          {
             "link": "alog",
-            "name": "Alog: zero allocation, dependency free JSON logger for Golang",
+            "name": "alog: zero-allocation, dependency-free JSON logger for Golang",
             "sec": 2,
             "to": "https://github.com/gonyyi/alog"
          },
          {
             "link": "dsyim",
-            "name": "DSYiM Blueprint SVG",
+            "name": "DSYiM Blueprint",
             "sec": 2,
             "to": "https://deoksuyi.com/dsyim-blueprint.svg"
          },
