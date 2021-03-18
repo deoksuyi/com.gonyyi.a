@@ -1,5 +1,6 @@
 <!DOCTYPE html> 
 <html lang="en">
+<!-- (c) gon y. yi -->
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,15 +9,14 @@
   <meta property="og:url" content="https://a.gonyyi.com"/>
   <meta property="og:image" content="img/og-img.png"/>
   <meta property="og:site_name" content="gonyyi.a"/>
-  <meta property="og:title" content="gonyyi link"/>
-  <meta property="og:description" content="short link fromfor gonyyi.com"/>
+  <meta property="og:title" content="Oops! Request link not found"/>
+
   
-  <base id="baseTarget" target="_self" href="https://gonyyi.com">
+  <title>gonyyi.a</title>
+  <base id="baseTarget" target="_self" href="https://gonyyi.com"/>
   <link rel="icon" href="/img/favicon.png" type="image/png"/>
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="any"/>
-  <link rel="stylesheet" type="text/css" href="/gonyyi.css">
-
-  <title>gonyyi.a</title>
+  <link rel="stylesheet" type="text/css" href="gonyyi.css"/>
 </head>
 <body>
 
@@ -24,19 +24,23 @@
 
   <h2>link not found</h2>
   <ul>
-    <script>
-      var prevUrl = location.href;
-      if(prevUrl!="") {
-        document.write("<li>req'd: <i>a.gonyyi.com</i>/"+location.pathname.substr(1)+"</li>");
-      }
-    </script>
+    <li>invalid link <i id="errorMsg"></i></li>
     <li>
       <a href='https://gonyyi.com'>back to main</a>
     </li>
-  </ul>
+  </ul>  
 
   <hr>
   <footer>(c) gon-y-yi</footer>
+
+  <script>
+    if(location.href.endsWith("/")) {
+      window.location.replace(location.href.slice(0,-1));
+      document.getElementById("errorMsg").innerHTML = "retrying without slash suffix";
+    } else if(location.href!="") {
+      document.getElementById("errorMsg").innerHTML = "gonyyi.com/" + window.location.pathname.substr(1);
+    }
+  </script>
 
 </body>
 </html>
