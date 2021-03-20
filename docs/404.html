@@ -2,45 +2,43 @@
 <html lang="en">
 <!-- (c) gon y. yi -->
 <head>
+  <base id="baseTarget" target="_self" href="https://a.gonyyi.com"/>
+  <title>a.gonyyi</title>
+
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://a.gonyyi.com"/>
-  <meta property="og:image" content="img/og-img.png"/>
-  <meta property="og:site_name" content="gonyyi.a"/>
-  <meta property="og:title" content="Oops! Request link not found"/>
-
+  <meta property="og:image" content="https://gonyyi.com/img/og-img.png"/>
+  <meta property="og:site_name" content="a.gonyyi"/>
+  <meta property="og:title" content="Oops! Request anchor not found"/>
   
-  <title>gonyyi.a</title>
-  <base id="baseTarget" target="_self" href="https://gonyyi.com"/>
-  <link rel="icon" href="/img/favicon.png" type="image/png"/>
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="any"/>
-  <link rel="stylesheet" type="text/css" href="gonyyi.css"/>
+  <link rel="icon" href="https://gonyyi.com/img/favicon.png" type="image/png"/>
+  <link rel="apple-touch-icon" href="https://gonyyi.com/img/apple-touch-icon.png" sizes="any"/>
+  <link rel="stylesheet" type="text/css" href="https://gonyyi.com/gonyyi.css"/>
 </head>
 <body>
+  <h1><a href="/">a.gonyyi</a></h1>
 
-  <h1><a href="/">gonyyi</a><i>.a</i></h1>
-
-  <h2>link not found</h2>
-  <ul>
-    <li>invalid link <i id="errorMsg"></i></li>
+  <h2>anchor not found</h2>
+  <ul class="mlink">
+    <li><span class="gray" id="errorMsg">try again</span></li>
     <li>
-      <a href='https://gonyyi.com'>back to main</a>
+      <a href='https://gonyyi.com'>back to home</a>
     </li>
-  </ul>  
+  </ul>
 
   <hr>
-  <footer>(c) gon-y-yi</footer>
+  <footer>&copy; gon-y-yi</footer>
 
   <script>
     if(location.href.endsWith("/")) {
       window.location.replace(location.href.slice(0,-1));
       document.getElementById("errorMsg").innerHTML = "retrying without slash suffix";
     } else if(location.href!="") {
-      document.getElementById("errorMsg").innerHTML = "gonyyi.com/" + window.location.pathname.substr(1);
+      document.getElementById("errorMsg").innerHTML = "a.gonyyi.com/" + window.location.pathname.substr(1);
     }
   </script>
-
 </body>
 </html>
